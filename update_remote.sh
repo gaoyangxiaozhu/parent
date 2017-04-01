@@ -9,6 +9,7 @@ git add --all
 git commit -am "$COMMIT_MSG"
 git push
 
+exit 0
 
 
 
