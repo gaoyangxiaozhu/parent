@@ -1,6 +1,5 @@
 #!/bin/bash
 
-set -e
 
 MD_SOURCE_DIR='child'
 HTML_DIR='docs'
@@ -8,9 +7,11 @@ HTML_DIR='docs'
 # get all md files from ${MD_SOURCE_DIR}
 MD_FILES=`ls ${MD_SOURCE_DIR} | grep -E '*.md$'`
 
+set -e 
+
 # exit if no md files
 if [ -z "$MD_FILES" ];then 
-exit 0
+    exit 0
 fi
 
 for FILE in $MD_FILES
